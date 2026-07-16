@@ -171,7 +171,7 @@ class MessagesController extends AppController
         // ATTENTION : $recipient est maintenant une chaîne de numéros séparés par des virgules
         $recipientString = trim($this->request->getData('numero')); 
         $content         = trim($this->request->getData('message'));
-        $startupName     = 'TAUKWA';
+        $startupName     = 'Taukwa';
         
          $userProfilData = $this->fetchTable('UserProfiles')->find()->where(['user_id'=>$this->currentUser->id])->first();
         $sender = $userProfilData->company_name;
@@ -337,13 +337,13 @@ class MessagesController extends AppController
         if (!is_null($operateur)||!empty($operateur))
         {
             if ($operateur == 'MTN') {
-            $sender  =  'TAUKWA';
+            $sender  =  'taukwa';
             }else{
             $sender  =  $chaine_reduite;
             }
         }else
         {
-            $sender  =  'TAUKWA';
+            $sender  =  'Taukwa';
         }
         // debug($sender);die();
        
