@@ -169,13 +169,22 @@ return [
      *   should be ignored in. Use this to ignore deprecations for plugins or parts of
      *   your application that still emit deprecations.
      */
-    'Error' => [
-        'errorLevel' => E_ALL,
+    // 'Error' => [
+    //     'errorLevel' => E_ALL,
+    //     'skipLog' => [],
+    //     'log' => true,
+    //     'trace' => true,
+    //     'ignoredDeprecationPaths' => [],
+    // ],
+
+     'Error' => [
+        'errorLevel' => E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED,
         'skipLog' => [],
         'log' => true,
-        'trace' => true,
+        'trace' => false,
         'ignoredDeprecationPaths' => [],
     ],
+
 
     /*
      * Debugger configuration
