@@ -35,28 +35,41 @@ return [
      * See app.php for more configuration options.
      */
     'Datasources' => [
-        'default' => [
-            'host' => 'localhost',
-            /*
-             * CakePHP will use the default DB port based on the driver selected
-             * MySQL on MAMP uses port 8889, MAMP users will want to uncomment
-             * the following line and set the port accordingly
-             */
-            //'port' => 'non_standard_port_number',
+        // 'default' => [
+        //     'host' => 'localhost',
+        //     /*
+        //      * CakePHP will use the default DB port based on the driver selected
+        //      * MySQL on MAMP uses port 8889, MAMP users will want to uncomment
+        //      * the following line and set the port accordingly
+        //      */
+        //     //'port' => 'non_standard_port_number',
 
-            'username' => 'my_app',
-            'password' => 'secret',
+        //     'username' => 'my_app',
+        //     'password' => 'secret',
 
-            'database' => 'my_app',
-            /*
-             * If not using the default 'public' schema with the PostgreSQL driver
-             * set it here.
-             */
-            //'schema' => 'myapp',
+        //     'database' => 'my_app',
+        //     /*
+        //      * If not using the default 'public' schema with the PostgreSQL driver
+        //      * set it here.
+        //      */
+        //     //'schema' => 'myapp',
 
-            /*
-             * You can use a DSN string to set the entire configuration
-             */
+        //     /*
+        //      * You can use a DSN string to set the entire configuration
+        //      */
+        //     'url' => env('DATABASE_URL', null),
+        // ],
+
+
+      'default' => [
+            'host' => env('DB_HOST', 'taukwa-taukwadb-ynxiwl'),
+            'port' => env('DB_PORT', 3306),
+
+            'username' => env('DB_USERNAME', 'taukwauser'),
+            'password' => env('DB_PASSWORD', 'Jeanpierre236'),
+
+            'database' => env('DB_DATABASE', 'taukwadb'),
+
             'url' => env('DATABASE_URL', null),
         ],
 
