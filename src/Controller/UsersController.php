@@ -249,10 +249,10 @@ class UsersController extends AppController
 
     public function validsignup($token)  {
         $user = $this->Users->find()->where(['uuid'=>$token])->first();
-        debug($user);die();
-        // if (!$user || $user->token_expires < new \DateTime()) {
-        //   return $this->redirect(['action' => 'obsolete', $user->email]);
-        // }
+        // debug($user);die();
+        if (!$user || $user->token_expires < new \DateTime()) {
+          return $this->redirect(['action' => 'obsolete', $user->email]);
+        }
         $user->is_active = true;
         if ($this->Users->save($user)) {
             $this->Flash->success(__('Votre compte a été activé avec succès ! Entrez vos identifiants pour continuer.'));
