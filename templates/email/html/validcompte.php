@@ -52,7 +52,7 @@
       <p>Merci de vous être inscrit sur <strong style="color: #3c7d9e;">Taukwa !</strong> </p>
       <p>Pour activer votre compte, cliquez sur le bouton ci-dessous :</p>
       <p style="color: #ffffff;">
-        <a href="https://taukwa.com/users/validsignup/<?= h($token) ?>" class="button" style="color: #ffffff !important;">Vérifier mon adresse</a>
+        <a href="https://taukwa.x-technova.com/users/validsignup/<?= h($token) ?>" class="button" style="color: #ffffff !important;">Vérifier mon adresse</a>
       </p>
       <p style="margin-top:20px; font-size:12px; color:#777;">
         Si vous n’avez pas demandé cet email, vous pouvez l’ignorer.
