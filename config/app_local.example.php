@@ -95,13 +95,23 @@ return [
      * See app.php for more configuration options.
      */
     'EmailTransport' => [
-        'default' => [
-            'host' => 'localhost',
-            'port' => 25,
-            'username' => null,
-            'password' => null,
-            'client' => null,
+        // 'default' => [
+        //     'host' => 'localhost',
+        //     'port' => 25,
+        //     'username' => null,
+        //     'password' => null,
+        //     'client' => null,
+        //     'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
+        // ],
+
+         'default' => [
+            'className' => 'Smtp',
+            'host' => 'smtp.hostinger.com',
+            'port' => 587,
+            'username' => 'contact@taukwa.com',
+            'password' => 'Alowiz236!',
+            'tls' => true,  
             'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
-        ],
+            ],
     ],
 ];
