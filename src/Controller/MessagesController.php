@@ -403,7 +403,7 @@ class MessagesController extends AppController
         $data = [
             'api_token'  => $apiToken,
             'recipient'  => $recipient,
-            'sender_id'  => 'CCT GODWIN',
+            'sender_id'  => 'Taukwa',
             'type'       => 'plain',
             'message'    => $content,
         ];
