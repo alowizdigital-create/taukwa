@@ -249,7 +249,7 @@ class UsersController extends AppController
 
     public function validsignup($token)  {
         $user = $this->Users->find()->where(['uuid'=>$token])->first();
-        // debug($user);die();
+        debug($user);die();
         // if (!$user || $user->token_expires < new \DateTime()) {
         //   return $this->redirect(['action' => 'obsolete', $user->email]);
         // }
